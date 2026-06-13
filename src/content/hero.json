@@ -1,0 +1,11 @@
+{
+  "skillGroups": [
+    {
+      "label": "AI",
+      "skills": [
+        "Claude",
+        "Gemini"
+      ]
+    }
+  ]
+}
