@@ -1,0 +1,183 @@
+.work-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: clamp(40px, 6vh, 64px);
+}
+
+.work-hint {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: #6b7079;
+  max-width: 26ch;
+  text-align: right;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+
+  @media (max-width: 880px) { grid-template-columns: 1fr; }
+}
+
+/* Project card */
+.project-card {
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  overflow: hidden;
+  background: #101216;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease;
+  outline: none;
+
+  &:hover, &:focus-visible {
+    border-color: rgba(61, 107, 255, 0.55);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  }
+}
+
+/* Card preview area */
+.card-preview {
+  position: relative;
+  aspect-ratio: 16 / 9.5;
+  overflow: hidden;
+  background: linear-gradient(135deg, #161a21, #0f1115);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.card-grid-lines {
+  position: absolute;
+  inset: 0;
+
+  &.grid-style-0 {
+    background-image:
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.04) 0 1px, transparent 1px 28px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0 1px, transparent 1px 28px);
+  }
+  &.grid-style-1 {
+    background-image: repeating-linear-gradient(90deg, rgba(255,255,255,0.045) 0 1px, transparent 1px 22px);
+  }
+  &.grid-style-2 {
+    background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 16px);
+  }
+  &.grid-style-3 {
+    background: radial-gradient(360px 200px at 50% 120%, rgba(61,107,255,0.22), transparent 60%);
+  }
+}
+
+.card-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  &.glow-0 { background: radial-gradient(420px 220px at 78% 12%, rgba(61,107,255,0.22), transparent 62%); }
+  &.glow-1 { background: radial-gradient(420px 220px at 20% 90%, rgba(61,107,255,0.2), transparent 60%); }
+  &.glow-2, &.glow-3 {} /* handled inline */
+}
+
+.card-chart {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 40px;
+  height: 46px;
+  background: linear-gradient(90deg, rgba(61,107,255,0.5), rgba(61,107,255,0.05));
+  clip-path: polygon(0 60%, 12% 40%, 24% 70%, 36% 30%, 48% 55%, 60% 18%, 72% 48%, 84% 22%, 100% 50%, 100% 100%, 0 100%);
+  opacity: 0.5;
+}
+
+.card-app-icon {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  transform: translate(-50%, -50%);
+  width: 86px;
+  height: 86px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.card-num {
+  position: absolute;
+  top: -14px;
+  left: 14px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 110px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.045);
+  pointer-events: none;
+  user-select: none;
+}
+
+.card-preview-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  color: #6b7079;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.card-fig-label {
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: #9aa0a8;
+}
+
+/* Card body */
+.card-body { padding: 22px; }
+
+.card-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 9px;
+}
+
+.card-title {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 21px;
+  letter-spacing: -0.01em;
+  color: #f4f5f7;
+}
+
+.card-arrow {
+  color: #3d6bff;
+  font-size: 17px;
+  flex-shrink: 0;
+}
+
+.card-desc {
+  margin: 0 0 16px;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: #9aa0a8;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}

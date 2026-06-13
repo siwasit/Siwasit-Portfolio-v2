@@ -1,0 +1,184 @@
+.hero-section {
+  position: relative;
+  z-index: 1;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: clamp(140px, 18vh, 200px) clamp(20px, 5vw, 56px) clamp(80px, 12vh, 130px);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.9fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+
+  @media (max-width: 880px) {
+    grid-template-columns: 1fr;
+    .hero-photo-wrap { order: -1; max-width: 320px; }
+  }
+}
+
+/* Text side */
+.hero-text { display: flex; flex-direction: column; }
+
+.available-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.02);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #9aa0a8;
+  margin-bottom: 30px;
+  width: fit-content;
+}
+
+.badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #3d6bff;
+  box-shadow: 0 0 10px rgba(61, 107, 255, 0.9);
+  flex-shrink: 0;
+}
+
+.hero-name {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: clamp(46px, 7.5vw, 92px);
+  line-height: 0.94;
+  letter-spacing: -0.035em;
+  color: #f4f5f7;
+}
+
+.hero-bio {
+  margin: 28px 0 0;
+  max-width: 38ch;
+  font-size: clamp(17px, 1.5vw, 20px);
+  line-height: 1.55;
+  color: #9aa0a8;
+  text-wrap: pretty;
+}
+
+/* Skills */
+.skills-block {
+  margin-top: 38px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skill-row {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 14px;
+  align-items: baseline;
+}
+
+.skill-row-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6b7079;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* CTAs */
+.hero-ctas {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Education */
+.education-line {
+  margin-top: 44px;
+  padding-top: 26px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: #6b7079;
+}
+
+/* Photo side */
+.hero-photo-wrap {
+  position: relative;
+  justify-self: center;
+  width: 100%;
+  max-width: 380px;
+}
+
+.photo-border-gradient {
+  position: absolute;
+  inset: -1px;
+  border-radius: 22px;
+  background: linear-gradient(150deg, rgba(61, 107, 255, 0.5), rgba(61, 107, 255, 0) 45%);
+  padding: 1px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.photo-card {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #101216;
+  aspect-ratio: 3 / 3.6;
+
+  &:hover .photo-img {
+    transform: scale(1.04);
+    filter: contrast(1.06);
+  }
+}
+
+.photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 12%;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1), filter 0.6s ease;
+}
+
+.photo-vignette {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(11, 12, 15, 0.55), transparent 38%);
+  pointer-events: none;
+}
+
+.photo-label {
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.photo-label-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #3d6bff;
+  flex-shrink: 0;
+}

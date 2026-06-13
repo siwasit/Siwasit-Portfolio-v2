@@ -1,0 +1,15 @@
+<nav class="nav">
+  <a href="#profile" class="nav-logo">
+    <span class="pulse-dot"></span>
+    Siwasit S.
+  </a>
+
+  <div class="nav-links">
+    @for (link of links; track link.id) {
+      <a [href]="'#' + link.id" class="nav-link" [class.active]="isActive(link.id)">
+        <span class="link-dot"></span>
+        {{ link.label }}
+      </a>
+    }
+  </div>
+</nav>

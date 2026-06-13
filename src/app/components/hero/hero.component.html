@@ -1,0 +1,57 @@
+<section id="profile" class="hero-section">
+  <div class="hero-grid">
+    <!-- LEFT: Text -->
+    <div class="hero-text">
+      <div reveal class="available-badge">
+        <span class="badge-dot"></span>
+        AVAILABLE FROM NOW
+      </div>
+
+      <h1 reveal class="hero-name">Siwasit<br>Saengnikun</h1>
+
+      <p reveal class="hero-bio">
+        A software engineer who builds web applications end&#8209;to&#8209;end — turning tangled
+        requirements and raw data into clean, dependable interfaces. Front&#8209;end focused,
+        full&#8209;stack capable.
+      </p>
+
+      <div reveal class="skills-block">
+        @for (group of skillGroups; track group.label) {
+          <div class="skill-row">
+            <span class="mono-label skill-row-label">{{ group.label }}</span>
+            <div class="skill-tags">
+              @for (s of group.skills; track s) {
+                <span class="skill-tag">{{ s }}</span>
+              }
+            </div>
+          </div>
+        }
+      </div>
+
+      <div reveal class="hero-ctas">
+        <a href="#contact" class="btn-ghost">
+          Get in touch <span class="arrow">&#8594;</span>
+        </a>
+        <a href="#work" class="btn-text">
+          View work <span class="arrow">&#8595;</span>
+        </a>
+      </div>
+
+      <div reveal class="education-line">
+        THAMMASAT UNIVERSITY · B.ENG SOFTWARE ENGINEERING · GPA 3.70
+      </div>
+    </div>
+
+    <!-- RIGHT: Photo -->
+    <div reveal class="hero-photo-wrap">
+      <div class="photo-border-gradient"></div>
+      <div class="photo-card">
+        <img src="images/profile.jpg" alt="Siwasit Saengnikun" class="photo-img">
+        <div class="photo-vignette"></div>
+        <div class="photo-label">
+          <span class="photo-label-dot"></span>BANGKOK · TH
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

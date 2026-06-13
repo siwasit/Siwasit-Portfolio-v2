@@ -1,0 +1,60 @@
+<!-- Backdrop -->
+<div
+  class="backdrop"
+  [class.open]="isOpen()"
+  (click)="close()"
+  [attr.aria-hidden]="!isOpen()"
+></div>
+
+<!-- Panel -->
+<aside class="panel" [class.open]="isOpen()" role="dialog" [attr.aria-modal]="isOpen()" [attr.aria-label]="project()?.title">
+  @if (project()) {
+    <div class="panel-inner">
+      <!-- Header -->
+      <div class="panel-header">
+        <span class="panel-tag">{{ project()!.tag }}</span>
+        <button class="panel-close" (click)="close()" type="button" aria-label="Close panel">
+          CLOSE &#10005;
+        </button>
+      </div>
+
+      <!-- Title -->
+      <h3 class="panel-title">{{ project()!.title }}</h3>
+      <p class="panel-period">{{ project()!.period }}</p>
+
+      <!-- Tags -->
+      <div class="panel-tags">
+        @for (tag of project()!.tags; track tag) {
+          <span class="panel-tag-pill">{{ tag }}</span>
+        }
+      </div>
+
+      <!-- Sections -->
+      <div class="panel-sections">
+        <div class="panel-section">
+          <div class="section-meta-label">
+            <span class="meta-line"></span>Problem
+          </div>
+          <p class="panel-body">{{ project()!.problem }}</p>
+        </div>
+        <div class="panel-section">
+          <div class="section-meta-label">
+            <span class="meta-line"></span>Solution
+          </div>
+          <p class="panel-body">{{ project()!.solution }}</p>
+        </div>
+        <div class="panel-section">
+          <div class="section-meta-label">
+            <span class="meta-line"></span>My Role
+          </div>
+          <p class="panel-body">{{ project()!.role }}</p>
+        </div>
+      </div>
+
+      <!-- Link -->
+      <a [href]="project()!.linkHref" target="_blank" rel="noopener" class="panel-link">
+        {{ project()!.linkLabel }}<span class="link-arrow">&#8599;</span>
+      </a>
+    </div>
+  }
+</aside>
