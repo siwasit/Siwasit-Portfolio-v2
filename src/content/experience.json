@@ -7,7 +7,13 @@
       "role": "Junior Software Developer · Full Time",
       "isActive": true,
       "bullets": [],
-      "tags": ["Angular", "Java Spring Boot", "Ant Design", "GitLab"]
+      "tags": [
+        "Angular",
+        "Java Spring Boot",
+        "Ant Design",
+        "GitLab",
+        "PostgreSQL"
+      ]
     },
     {
       "dateTop": "Jan — May",
@@ -18,18 +24,27 @@
       "bullets": [
         {
           "text": "Contributed to front‑end and back‑end development of the {BizX} web application.",
-          "highlights": ["BizX"]
+          "highlights": [
+            "BizX"
+          ]
         },
         {
           "text": "Built the {Multi‑Organization} module: a hierarchy visualization for complex corporate relationships.",
-          "highlights": ["Multi‑Organization"]
+          "highlights": [
+            "Multi‑Organization"
+          ]
         },
         {
           "text": "Developed company‑management CRUD features, fully compatible with the existing codebase, and integrated with Netbay services.",
           "highlights": []
         }
       ],
-      "tags": ["Angular", "Java Spring Boot", "Ant Design", "GitLab"]
+      "tags": [
+        "Angular",
+        "Java Spring Boot",
+        "Ant Design",
+        "GitLab"
+      ]
     },
     {
       "dateTop": "Jun — Aug",
@@ -44,14 +59,24 @@
         },
         {
           "text": "Built {Sinyal}, a tool that evaluates stock signals from technical indicators.",
-          "highlights": ["Sinyal"]
+          "highlights": [
+            "Sinyal"
+          ]
         },
         {
           "text": "Scraped {10,629} instruments across 7 global markets and automated the pipeline behind a web API.",
-          "highlights": ["10,629"]
+          "highlights": [
+            "10,629"
+          ]
         }
       ],
-      "tags": ["React.js", "FastAPI", "Tailwind", "Vite", "Web Scraping"]
+      "tags": [
+        "React.js",
+        "FastAPI",
+        "Tailwind",
+        "Vite",
+        "Web Scraping"
+      ]
     },
     {
       "dateTop": "Aug 23 — Dec",
@@ -69,7 +94,9 @@
           "highlights": []
         }
       ],
-      "tags": []
+      "tags": [
+        "DBMS"
+      ]
     }
   ]
 }
