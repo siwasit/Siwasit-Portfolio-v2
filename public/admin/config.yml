@@ -4,9 +4,6 @@ backend:
   branch: main
   base_url: https://sveltia-cms-auth.siwasit2546.workers.dev
 
-# Uncomment the line below for local development (run: npx decap-server)
-# local_backend: true
-
 media_folder: public/images
 public_folder: /images
 
