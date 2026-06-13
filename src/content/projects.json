@@ -13,8 +13,8 @@
       "problem": "Enterprise clients needed to model and manage complex corporate structures — parent companies, subsidiaries and the relationships between them — directly inside the BizX platform, where the legacy flow offered no clear way to see or edit those connections.",
       "solution": "Designed a hierarchy visualization that renders corporate relationships at a glance, paired with full CRUD for company management. Everything was built to stay compatible with the existing codebase and to integrate cleanly with Netbay's internal services.",
       "role": "Front-end and back-end developer on the Multi-Organization module, owning both the visualization layer and the company-management CRUD.",
-      "linkLabel": "-",
-      "linkHref": "-",
+      "linkLabel": "",
+      "linkHref": "",
       "figLabel": "fig.01 — hierarchy view",
       "figNumber": "01"
     },
@@ -29,8 +29,8 @@
       "problem": "Admins managing IBox lacked a single place to configure the system, and configuration still living in the legacy IBox app had to move to the current platform without losing data.",
       "solution": "Built four CRUD pages covering four configuration types and migrated company configuration from the legacy app to the current one. Shipped to the development environment for QA before raising merge requests to UAT.",
       "role": "Front-end developer — built the admin CRUD UI and led the configuration migration.",
-      "linkLabel": "-",
-      "linkHref": "-",
+      "linkLabel": "",
+      "linkHref": "",
       "figLabel": "fig.02 — admin console",
       "figNumber": "02"
     },

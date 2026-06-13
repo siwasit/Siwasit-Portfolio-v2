@@ -6,8 +6,8 @@ export interface Project {
   problem: string;
   solution: string;
   role: string;
-  linkLabel: string;
-  linkHref: string;
+  linkLabel?: string;
+  linkHref?: string;
   figLabel: string;
   figNumber: string;
 }

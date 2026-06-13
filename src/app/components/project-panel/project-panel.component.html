@@ -52,9 +52,11 @@
       </div>
 
       <!-- Link -->
-      <a [href]="project()!.linkHref" target="_blank" rel="noopener" class="panel-link">
-        {{ project()!.linkLabel }}<span class="link-arrow">&#8599;</span>
-      </a>
+      @if (project()!.linkHref) {
+        <a [href]="project()!.linkHref" target="_blank" rel="noopener" class="panel-link">
+          {{ project()!.linkLabel }}<span class="link-arrow">&#8599;</span>
+        </a>
+      }
     </div>
   }
 </aside>

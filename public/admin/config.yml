@@ -120,9 +120,11 @@ collections:
               - name: linkLabel
                 label: Link Label
                 widget: string
+                required: false
               - name: linkHref
                 label: Link URL
                 widget: string
+                required: false
               - name: figLabel
                 label: Figure Label (e.g. "fig.01 — hierarchy view")
                 widget: string
