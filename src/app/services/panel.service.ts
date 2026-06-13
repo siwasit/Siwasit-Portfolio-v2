@@ -38,8 +38,8 @@ export const PROJECTS: Project[] = [
     role: 'Project manager, business analyst and system analyst — plus full-stack development of the Firebase API and Flutter front-end.',
     linkLabel: 'GitHub',
     linkHref: 'https://github.com/siwasit',
-    figLabel: 'fig.04 — mobile app',
-    figNumber: '04'
+    figLabel: 'fig.03 — mobile app',
+    figNumber: '03'
   }
 ];
 
