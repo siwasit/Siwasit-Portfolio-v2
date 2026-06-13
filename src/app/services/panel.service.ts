@@ -29,20 +29,7 @@ export const PROJECTS: Project[] = [
     figNumber: '02'
   },
   {
-    tag: '03 / SINYAL',
-    title: 'Sinyal',
-    period: 'Ideatrade · Summer 2025',
-    tags: ['React.js', 'FastAPI', 'Tailwind', 'Web Scraping'],
-    problem: 'New traders struggled to read raw market data and judge whether a stock was worth watching — the signal was buried in noise across many disconnected sources.',
-    solution: 'A web app that evaluates stock signals using technical indicators, backed by an automated pipeline that scrapes 10,629 instruments across SET, NYSE, NASDAQ, CBOE, AMEX, SSE and SZSE and serves them through a web API.',
-    role: 'Web developer — built the visualizations, the web API, and automated the scraping pipeline end-to-end.',
-    linkLabel: 'GitHub',
-    linkHref: 'https://github.com/siwasit',
-    figLabel: 'fig.03 — signal chart',
-    figNumber: '03'
-  },
-  {
-    tag: '04 / MEWS APP',
+    tag: '03 / MEWS APP',
     title: 'MEWS Application',
     period: 'Academic · Mar 2024 — 2025',
     tags: ['Flutter', 'Firebase'],
