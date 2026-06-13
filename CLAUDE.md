@@ -19,7 +19,21 @@ Single-page portfolio. No routing — the app is one scrollable page with four a
 
 **State flow:** `PanelService` (`src/app/services/panel.service.ts`) is the only shared state. It holds a signal `openIndex: signal<number | null>` that controls which project's slide-over panel is open. `WorkComponent` calls `panel.open(i)` on card click; `ProjectPanelComponent` reads the signal via `computed()` and drives its own visibility with CSS class `[class.open]`. No `@Input`/`@Output` cross-component wiring — everything goes through the service.
 
-**Content is co-located with the service:** `PROJECTS` (the `Project[]` array) is exported from `panel.service.ts`, not from a separate data file. All four project entries live there. To add/edit a project, edit that array and update the `@switch` descriptions in `work.component.html`.
+**Content is driven by JSON files:** All editable content lives in `src/content/`. Do not hardcode content in components.
+
+| File | Used by |
+|---|---|
+| `src/content/hero.json` | `HeroComponent` — `skillGroups` array |
+| `src/content/experience.json` | `ExperienceComponent` — `entries` array |
+| `src/content/projects.json` | `PanelService` — `projects` array (imported as `PROJECTS`) |
+
+To add/edit content, update the relevant JSON file or use the CMS at `/admin`.
+
+**Project model** (`src/app/models/project.model.ts`): each project has `cardDesc` (card summary text) and `previewStyle` (0–3, controls which card visual variant renders). `linkLabel` and `linkHref` are optional — the panel link is hidden when `linkHref` is empty.
+
+**Card preview styles** (in `work.component.html`): driven by `project.previewStyle`, not loop index. Style 2 renders a chart element; style 3 renders an app icon "M". CSS classes `grid-style-{n}` and `glow-{n}` are applied accordingly.
+
+**Experience bullet highlights:** bullet text uses `{word}` syntax to mark highlighted spans. `ExperienceComponent.parseBullet()` parses this into segments. The `highlights` array in each bullet must list the same words that appear in braces in the text.
 
 **Scroll-reveal:** `RevealDirective` (`src/app/directives/reveal.directive.ts`) is applied via the `reveal` attribute selector. It adds class `reveal` to the host element (which starts at `opacity:0; transform:translateY(20px)` in global styles), then uses `IntersectionObserver` to add `revealed` once the element enters the viewport. Apply it to any element that should animate in on scroll.
 
@@ -28,6 +42,15 @@ Single-page portfolio. No routing — the app is one scrollable page with four a
 **Global shared styles** (`src/styles.scss`) defines the utility classes used across components: `.reveal`/`.revealed`, `.skill-tag`, `.tech-badge`, `.mono-label`, `.section-inner`, `.section-heading`, `.accent-bullet`, `.btn-ghost`, `.btn-text`. Component SCSS files rely on these being global — don't scope them.
 
 **Static assets** (profile photo) live in `public/images/` and are referenced as `/images/profile.jpg` at runtime (Angular copies `public/**` to the output root).
+
+## CMS
+
+Content is managed via Sveltia CMS at `/admin`. Configuration is at `public/admin/config.yml`.
+
+- **Backend:** GitHub (`siwasit/Siwasit-Portfolio-v2`, `main` branch) via a Cloudflare Worker OAuth proxy (`sveltia-cms-auth`)
+- **Deployment:** Cloudflare Pages — a CMS save commits the JSON file, Pages auto-deploys
+- **Collections:** Hero, Experience, Projects — each maps to the corresponding `src/content/*.json` file
+- **Local development:** uncomment `local_backend: true` in `config.yml` and run `npx decap-server`, then visit `http://localhost:4200/admin`
 
 ## Design tokens
 
