@@ -2,6 +2,8 @@ export interface Project {
   tag: string;
   title: string;
   period: string;
+  cardDesc: string;
+  previewStyle: number;
   tags: string[];
   problem: string;
   solution: string;

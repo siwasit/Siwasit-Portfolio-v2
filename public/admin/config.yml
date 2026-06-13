@@ -101,6 +101,15 @@ collections:
               - name: period
                 label: Period (e.g. "Netbay PCL · Jan — May 2026")
                 widget: string
+              - name: cardDesc
+                label: Card Description
+                widget: string
+              - name: previewStyle
+                label: Preview Style (0=grid, 1=grid variant, 2=chart, 3=app icon)
+                widget: number
+                value_type: int
+                min: 0
+                max: 3
               - name: tags
                 label: Tech Tags
                 widget: list

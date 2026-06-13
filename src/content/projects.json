@@ -4,6 +4,8 @@
       "tag": "01 / BIZX · MULTI-ORG",
       "title": "BizX · Multi-Organization",
       "period": "Netbay PCL · Jan — May 2026",
+      "cardDesc": "Hierarchy visualization and company CRUD for an enterprise platform.",
+      "previewStyle": 0,
       "tags": [
         "Angular",
         "Java Spring Boot",
@@ -22,6 +24,8 @@
       "tag": "02 / NETBAY IBOX",
       "title": "Netbay IBox",
       "period": "Netbay PCL · Jan — May 2026",
+      "cardDesc": "Admin CRUD console and configuration migration from a legacy web app.",
+      "previewStyle": 1,
       "tags": [
         "Angular",
         "Ant Design"
@@ -38,6 +42,8 @@
       "tag": "03 / MEWS APP",
       "title": "MEWS Application",
       "period": "Academic · Mar 2024 — 2025",
+      "cardDesc": "A mobile tool for nurses to assess and triage patient urgency at the bedside.",
+      "previewStyle": 3,
       "tags": [
         "Flutter",
         "Firebase"

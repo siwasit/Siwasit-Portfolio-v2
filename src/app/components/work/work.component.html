@@ -12,17 +12,17 @@
       <div reveal class="project-card" (click)="openPanel(i)" (keydown.enter)="openPanel(i)" tabindex="0" role="button" [attr.aria-label]="'Open ' + project.title">
         <!-- Card visual -->
         <div class="card-preview">
-          <div class="card-grid-lines" [class]="'grid-style-' + i"></div>
-          @if (i === 2) {
+          <div class="card-grid-lines" [class]="'grid-style-' + project.previewStyle"></div>
+          @if (project.previewStyle === 2) {
             <div class="card-chart"></div>
           }
-          @if (i === 3) {
+          @if (project.previewStyle === 3) {
             <div class="card-app-icon">M</div>
           }
           <div class="card-num">{{ project.figNumber }}</div>
           <span class="card-preview-badge">PREVIEW</span>
           <div class="card-fig-label">{{ project.figLabel }}</div>
-          <div class="card-glow" [class]="'glow-' + i"></div>
+          <div class="card-glow" [class]="'glow-' + project.previewStyle"></div>
         </div>
 
         <!-- Card body -->
@@ -31,14 +31,7 @@
             <h3 class="card-title">{{ project.title }}</h3>
             <span class="card-arrow">&#8599;</span>
           </div>
-          <p class="card-desc">
-            @switch (i) {
-              @case (0) { Hierarchy visualization and company CRUD for an enterprise platform. }
-              @case (1) { Admin CRUD console and configuration migration from a legacy web app. }
-              @case (2) { Stock&#8209;signal evaluation from technical indicators across 10k+ scraped instruments. }
-              @case (3) { A mobile tool for nurses to assess and triage patient urgency at the bedside. }
-            }
-          </p>
+          <p class="card-desc">{{ project.cardDesc }}</p>
           <div class="card-tags">
             @for (tag of project.tags; track tag) {
               <span class="tech-badge">{{ tag }}</span>
