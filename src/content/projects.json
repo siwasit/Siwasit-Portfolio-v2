@@ -51,8 +51,8 @@
       "problem": "Nurses needed a fast, consistent way to score patient urgency (Modified Early Warning Score) at the bedside, where manual calculation is slow and error-prone.",
       "solution": "A Flutter app with a Firebase backend that lets nurses assess and triage urgency levels in seconds. Requirements engineering with the client, plus full mockup and prototyping before development.",
       "role": "Project manager, business analyst and system analyst — plus full-stack development of the Firebase API and Flutter front-end.",
-      "linkLabel": "GitHub",
-      "linkHref": "https://github.com/siwasit",
+      "linkLabel": "Demo",
+      "linkHref": "https://www.youtube.com/watch?v=jIdxZYJtyms",
       "figLabel": "fig.03 — mobile app",
       "figNumber": "03"
     }
