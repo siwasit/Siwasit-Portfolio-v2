@@ -71,6 +71,7 @@ collections:
                   - name: highlights
                     label: Highlighted Words (must match words in braces above)
                     widget: list
+                    required: false
                     field:
                       name: highlight
                       label: Word
