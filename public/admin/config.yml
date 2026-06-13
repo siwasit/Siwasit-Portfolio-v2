@@ -1,0 +1,132 @@
+backend:
+  name: github
+  repo: siwasit/Siwasit-Portfolio-v2
+  branch: main
+  base_url: https://sveltia-cms-auth.siwasit2546.workers.dev
+
+# Uncomment the line below for local development (run: npx decap-server)
+# local_backend: true
+
+media_folder: public/images
+public_folder: /images
+
+collections:
+  - name: hero
+    label: Hero
+    files:
+      - name: hero
+        label: Skill Groups
+        file: src/content/hero.json
+        fields:
+          - name: skillGroups
+            label: Skill Groups
+            widget: list
+            fields:
+              - name: label
+                label: Group Label
+                widget: string
+              - name: skills
+                label: Skills
+                widget: list
+                field:
+                  name: skill
+                  label: Skill
+                  widget: string
+
+  - name: experience
+    label: Experience
+    files:
+      - name: experience
+        label: Experience Entries
+        file: src/content/experience.json
+        fields:
+          - name: entries
+            label: Entries
+            widget: list
+            fields:
+              - name: dateTop
+                label: Date (top line, e.g. "Jan — May")
+                widget: string
+              - name: dateBottom
+                label: Date (bottom line, e.g. "2026")
+                widget: string
+              - name: company
+                label: Company
+                widget: string
+              - name: role
+                label: Role
+                widget: string
+              - name: isActive
+                label: Currently Active
+                widget: boolean
+                default: false
+              - name: bullets
+                label: Bullet Points
+                widget: list
+                fields:
+                  - name: text
+                    label: Text (wrap highlight words in {curly braces})
+                    widget: string
+                  - name: highlights
+                    label: Highlighted Words (must match words in braces above)
+                    widget: list
+                    field:
+                      name: highlight
+                      label: Word
+                      widget: string
+              - name: tags
+                label: Tech Tags
+                widget: list
+                field:
+                  name: tag
+                  label: Tag
+                  widget: string
+
+  - name: projects
+    label: Projects
+    files:
+      - name: projects
+        label: Projects
+        file: src/content/projects.json
+        fields:
+          - name: projects
+            label: Projects
+            widget: list
+            fields:
+              - name: tag
+                label: Tag (e.g. "01 / BIZX · MULTI-ORG")
+                widget: string
+              - name: title
+                label: Title
+                widget: string
+              - name: period
+                label: Period (e.g. "Netbay PCL · Jan — May 2026")
+                widget: string
+              - name: tags
+                label: Tech Tags
+                widget: list
+                field:
+                  name: tag
+                  label: Tag
+                  widget: string
+              - name: problem
+                label: Problem
+                widget: text
+              - name: solution
+                label: Solution
+                widget: text
+              - name: role
+                label: My Role
+                widget: text
+              - name: linkLabel
+                label: Link Label
+                widget: string
+              - name: linkHref
+                label: Link URL
+                widget: string
+              - name: figLabel
+                label: Figure Label (e.g. "fig.01 — hierarchy view")
+                widget: string
+              - name: figNumber
+                label: Figure Number (e.g. "01")
+                widget: string

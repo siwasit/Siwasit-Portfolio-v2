@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RevealDirective } from '../../directives/reveal.directive';
+import heroData from '../../../content/hero.json';
 
 interface SkillGroup { label: string; skills: string[]; }
 
@@ -11,9 +12,5 @@ interface SkillGroup { label: string; skills: string[]; }
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent {
-  readonly skillGroups: SkillGroup[] = [
-    { label: 'Languages',    skills: ['Python', 'JavaScript', 'Java', 'SQL', 'HTML / CSS'] },
-    { label: 'Frameworks',   skills: ['React', 'Angular', 'Spring Boot', 'FastAPI', 'Django'] },
-    { label: 'Tools & Data', skills: ['Docker', 'Git / GitLab', 'PostgreSQL', 'MySQL', 'Neo4j', 'Figma'] }
-  ];
+  readonly skillGroups: SkillGroup[] = heroData.skillGroups;
 }

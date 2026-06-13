@@ -1,0 +1,7 @@
+{
+  "skillGroups": [
+    { "label": "Languages", "skills": ["Python", "JavaScript", "Java", "SQL", "HTML / CSS"] },
+    { "label": "Frameworks", "skills": ["React", "Angular", "Spring Boot", "FastAPI", "Django"] },
+    { "label": "Tools & Data", "skills": ["Docker", "Git / GitLab", "PostgreSQL", "MySQL", "Neo4j", "Figma"] }
+  ]
+}
